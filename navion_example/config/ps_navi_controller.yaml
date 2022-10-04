@@ -1,0 +1,27 @@
+controller_name: ps_navi
+eMNS_name: navion
+
+joy_node/dev: "/dev/input/psc"
+
+/ps_navi_controller/mapping: 1 #mapping for the rotations
+/ps_navi_controller/mfControlMode: 1 #control mode for the magnetic field
+
+/ps_navi_controller/joy_axis_0: 1
+/ps_navi_controller/joy_axis_1: 0
+/ps_navi_controller/joy_axis_l1: 3
+
+/ps_navi_controller/button_x: 1
+/ps_navi_controller/button_o: 0
+/ps_navi_controller/button_up: 8
+/ps_navi_controller/button_down: 9
+/ps_navi_controller/button_left: 10
+/ps_navi_controller/button_right: 11
+/ps_navi_controller/button_ps: 6
+/ps_navi_controller/button_l1: 5
+/ps_navi_controller/button_l2: 4
+/ps_navi_controller/button_l3: 7
+
+/ps_navi_controller/angleIncrement: 0.040
+/ps_navi_controller/posIncrement: 0.0005
+/ps_navi_controller/mfMagnitude: 0.02
+/ps_navi_controller/maxMfMagnitudeIncrement_: 0.0001
