@@ -1,7 +1,7 @@
 # Navion example package 
 
 ## Overview
-The package provides examples of how to interface with the Navion system through ROS. 
+The package provides examples to interface with the Navion system through ROS. 
 
 ## Dependencies
 
