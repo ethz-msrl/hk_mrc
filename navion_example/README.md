@@ -21,7 +21,7 @@ The camera is interfaced with the features from the package ```video_stream_open
 
 ### Launch files
 
-*  ```navion_rviz.launch.launch```: launch the Navion and RViz window
-*  ```navion_ps_navi.launch```: launch Navion
-*  ```navion_cam.launch```: Interface and start camera
+*  ```navion_rviz.launch.launch```: launch the Navion together with a RViz interface
+*  ```navion_ps_navi.launch```: launch the Navion and the PlayStation Navi interface
+*  ```navion_cam.launch```: launch the camera interface
 
