@@ -5,7 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded: ~
       Splitter Ratio: 0.5
-    Tree Height: 408
+    Tree Height: 276
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -23,7 +23,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: Image
+    SyncSource: ""
   - Class: magnetics/Magnetic Field Panel
     Name: Magnetic Field Panel
     frame_id: mns
@@ -111,7 +111,7 @@ Visualization Manager:
       Visual Enabled: true
     - Class: rviz/Image
       Enabled: true
-      Image Topic: /tne_cam/image_raw
+      Image Topic: /camera/image_raw
       Max Value: 1
       Median window: 5
       Min Value: 0
