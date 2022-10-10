@@ -1,7 +1,7 @@
-# Navion example package 
+# Navion ROS example package 
 
 ## Overview
-The package provides examples to interface with the Navion system through ROS. 
+The package provides examples to use the Navion system with ROS. 
 
 ## Dependencies
 
@@ -21,7 +21,11 @@ The camera is interfaced with the features from the package ```video_stream_open
 
 ### Launch files
 
-*  ```navion_rviz.launch.launch```: launch the Navion together with a RViz interface
-*  ```navion_ps_navi.launch```: launch the Navion and the PlayStation Navi interface
-*  ```navion_cam.launch```: launch the camera interface
+#### navion_rviz.launch.launch
+Uses Navion with a generic RViz interface for research purposes. The control of the field is performed with a magnetic RViz panel. The user can also control the individual currents in the coils.
 
+#### navion_ps_navi.launch
+Launches ```navion_rviz.launch``` and interfaces with a PlayStation Navi controller.
+
+#### navion_cam.launch
+Interfaces a camera using the VideoStreamOpenCV package.
