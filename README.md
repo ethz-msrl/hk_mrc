@@ -1,4 +1,4 @@
-# hk_msmrc
+# hk_mrc
 ROS packes used to interface with the Navion installed in the Multi-Scale Medical Roboics Center in Hongkong
 
 ## Launch files
