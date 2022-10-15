@@ -3,7 +3,7 @@ eMNS_name: navion
 
 joy_node/dev: "/dev/input/psc"
 
-/ps_navi_controller/mapping: 3 #mapping for the rotations
+/ps_navi_controller/mapping: 1 #mapping for the rotations
 /ps_navi_controller/mfControlMode: 1 #control mode for the magnetic field
 
 /ps_navi_controller/joy_axis_0: 1

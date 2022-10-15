@@ -6,7 +6,7 @@
     <include file="$(find navion_example)/launch/navion_rviz.launch" pass_all_args="true" />
 
     <!-- PlayStation controller -->
-    <!-- <include file="$(find navion_example)/launch/navion_psc.launch" pass_all_args="true" /> -->
+    <include file="$(find navion_example)/launch/navion_psc.launch" pass_all_args="true" />
 
     <!-- Camera -->
     <include file="$(find navion_example)/launch/navion_cam.launch" pass_all_args="true" />
