@@ -1,0 +1,1 @@
+*.{STL,stl,mp4,dae,bag,png} filter=lfs diff=lfs merge=lfs -text

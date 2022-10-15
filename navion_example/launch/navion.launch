@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Please either add respawn="true" or required="true" to each node. -->
+
+<launch>  
+    <arg name="cal_path" default="$(find mpem)/cal/Navion_2-1_Calibration_25-05-2022.yaml" />
+    <arg name="emns_param_path" default="$(find mag_manip)/params/Navion_2.yaml" />
+    <arg name="navion_version" default="2_1" />
+
+    <node name="mns_broadcaster" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 world mns 100" respawn="true" />
+
+    <node name="nav_controller" pkg="nav_controller" type="navion2_controller_node" output="screen" respawn="true">
+        <rosparam command="load" file="$(find nav_controller)/launch/parameters.yaml" />
+        <rosparam command="load" file="$(find nav_controller)/param/navion_$(arg navion_version).yaml" />
+        <param name="emns_param" type="string" value="$(find mag_manip)/params/Navion_2.yaml"/>
+    </node>
+
+    <node name="backward_model" pkg="mag_calculator" type="backward_model" output="screen" respawn="true">
+        <param name="calibration_path" type="string" value="$(arg cal_path)" />
+        <param name="is_field_inverted" type="bool" value="false" />
+        <param name="max_field_intensity" type="double" value="0.08" />
+        <remap from="/backward_model/currents" to="navion/target_currents"/>
+    </node>
+
+    <node name="forward_model" pkg="mag_calculator" type="forward_model" output="screen" respawn="true">
+        <param name="calibration_path" type="string" value="$(arg cal_path)" />
+        <param name="display_warning_zero_field" type="bool" value="false" />
+        <param name="is_field_inverted" type="bool" value="false" />
+        <remap from="/forward_model/currents" to="navion/actual_currents"/>
+        <remap from="/forward_model/field_array" to="navion/actual_field"/>
+    </node>
+
+</launch>

@@ -33,8 +33,10 @@
 
   <build_depend>std_msgs</build_depend>
   <build_depend>tf</build_depend>
+  <build_depend>pov_mag_navigation</build_depend>
 
   <run_depend>video_stream_opencv</run_depend>
-  <run_depend>mag_launch</run_depend>
+  <run_depend>nav_launch</run_depend>
+  <run_depend>pov_mag_navigation</run_depend>
 
 </package>

@@ -1,0 +1,7 @@
+time_average: 0.5         # Time window for averaging of image speed (s)
+min_meas_speed: 0.1       # Minimum admissible measured speed for correction
+min_des_speed: 0.1        # Minimum admissible desired speed for correction
+max_std_meas: 3.0         # Maximum admissible std on measure for correction
+time_to_calibrate: 1.5    # Time for calibration (s)
+angle_treshold: 5.0       # Treshold to perform the correction (deg)
+exponential_factor: 20.   # Factor for exponential decay correction
