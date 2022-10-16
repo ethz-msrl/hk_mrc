@@ -26,7 +26,15 @@ Target currents in each coil in A.
 
 * **`navion/target_currents`** ([mag_msgs/CurrentsStamped])
 
+Desired magnetic field.
+
+* **`backwards_model/field`** ([mag_msgs/FieldStamped])
+
 #### Published
+
+Actual magnetic field.  
+
+* **`navion/actual_field`** ([mag_msgs/FieldStamped])
 
 Actual measured currents in each coil in A.  
 
@@ -53,3 +61,17 @@ Acknowledge the errors in fault state to reset the system
 Set the modulus for the log
 
 * **`navion/set_logging_modulus`** ([nav_controller::msgSetLogMod])
+
+### Messages
+
+Currents
+
+* **`mag_msgs/CurrentsStamped`** ([float64[] currents])
+
+Magnetic field 
+
+* **`mag_msgs/FieldStamped`** ([Field field])
+
+Magnetic field vector
+
+* **`mag_msgs/FieldStamped`** ([geometry_msgs/Vector3 vector, geometry_msgs/Point position])
