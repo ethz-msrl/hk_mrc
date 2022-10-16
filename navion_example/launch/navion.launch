@@ -18,7 +18,7 @@
     <node name="backward_model" pkg="mag_calculator" type="backward_model" output="screen" respawn="true">
         <param name="calibration_path" type="string" value="$(arg cal_path)" />
         <param name="is_field_inverted" type="bool" value="false" />
-        <param name="max_field_intensity" type="double" value="0.08" />
+        <param name="max_field_intensity" type="double" value="0.02" />
         <remap from="/backward_model/currents" to="navion/target_currents"/>
     </node>
 

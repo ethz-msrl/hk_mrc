@@ -3,7 +3,7 @@
 <launch>  
 
     <!-- PS Navi controller -->
-    <rosparam command="load" file="$(find navion_example)/config/ps_controller.yaml" />
+    <rosparam command="load" file="/home/navion/Desktop/ps_controller.yaml" />
 
     <node respawn="true" pkg="joy" type="joy_node" name="joy_node">
             <param name="autorepeat_rate" value="50"/>
