@@ -6,8 +6,8 @@ joy_node/dev: "/dev/input/psc"
 ###### CHANGE CONTROLLER MAPPING ###############################
 # mapping 0: joystick axis 0 -> rot(X),  axis 1 -> rot(Y)      #
 # mapping 1: joystick axis 0 -> azimuth, axis 1 -> inclination #
-# mappint 2: joystick axis 0 -> none,    axis 1 -> rot(Y)      #
-#                                                              #
+# mapping 2: joystick axis 0 -> none,    axis 1 -> rot(Y)      #
+# mapping 3: absolute field mapping x-z plane                  #
 /ps_navi_controller/mapping: 1 #mapping for the rotations      #
 #                                                              #
 ################################################################
