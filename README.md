@@ -1,6 +1,16 @@
 # hk_mrc
 ROS packes used to interface with the Navion installed in the Multi-Scale Medical Roboics Center in Hongkong
 
+ <table border = "0">
+     <tr>
+         <img src="navion_example/images/navion_rviz.png" alt="drawing" />
+     </tr>
+     <tr>
+         <img src="navion_example/images/rqt_graph.png" alt="drawing" />
+     </tr>
+ </table>
+ 
+ 
 ## Launch files
 
 ### navion2.launch
