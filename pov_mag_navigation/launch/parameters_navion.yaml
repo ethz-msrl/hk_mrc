@@ -1,0 +1,4 @@
+enable_logging: true
+enable_influxdb_logging: false
+enable_advancer_on_init: false
+enable_currents_reset: false

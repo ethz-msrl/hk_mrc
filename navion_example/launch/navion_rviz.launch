@@ -5,14 +5,13 @@
 <launch>  
 
     <!-- Navion -->
-    <include file="$(find nav_launch)/launch/navion2.launch" pass_all_args="true" />
+    <include file="$(find navion_example)/launch/navion.launch" pass_all_args="true" />
 
     <!-- RViz -->
     <node name="rviz" pkg="rviz" type='rviz' args="-d $(find navion_example)/rviz/config_navion.rviz" output="screen" />
     <include file="$(find nav_rviz)/launch/navion2_urdf_model.launch"/>
 
-
-
+    <!-- Vector field in RViz -->
     <node pkg="tsc_utils" type="poses_custom_grid_node.py" name="forward_model_list_pub" respawn="true">
         <param name="~frame_id" type="string" value="mns" />
         <param name="~nx" type="int" value="10" />
@@ -21,9 +20,5 @@
         <param name="~spacing" type="double" value="0.02" />
         <remap from="~/poses" to="/forward_model/poses"/>
     </node> 
-
-
-    <!-- Camera -->
-    <include file="$(find navion_example)/launch/navion_cam.launch" pass_all_args="true" />
 
 </launch>

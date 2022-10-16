@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<?xml-model
+  href="http://download.ros.org/schema/package_format3.xsd"
+  schematypens="http://www.w3.org/2001/XMLSchema"?>
+<!--
+    Tesla - A ROS-based framework for performing magnetic manipulation
+
+    Copyright 2018 Multi Scale Robotics Lab
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<package format="3">
+  <name>pov_mag_navigation</name>
+  <version>1.1.0</version>
+  <description>
+    Magnetic navigation using endoscopic camera for POV steering using optical flow
+  </description>
+  <maintainer email="qboehler@ethz.ch">qboehler</maintainer>
+  <author>Quentin Boehler</author>
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+
+  <depend>usb_cam</depend>
+  <depend>opencv_apps</depend>
+  <depend>joy</depend>
+  <depend>tsc_utils</depend>
+  <depend>cardiomag_controller</depend>
+  <depend>nav_controller</depend>
+  <depend>mag_calculator</depend>
+  <depend>dynamic_reconfigure</depend>
+  <depend>navion_sim</depend>
+  <depend>nav_launch</depend>
+
+  <exec_depend condition="$ROS_PYTHON_VERSION == 2">python-numpy</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 3">python3-numpy</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 2">python-scipy</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 3">python3-scipy</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 2">python-pyyaml</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 3">python3-pyyaml</exec_depend>
+
+  <export>
+
+  </export>
+
+</package>
+
+

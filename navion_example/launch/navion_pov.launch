@@ -1,0 +1,47 @@
+<launch>
+
+<arg name="loop_rate" default="30" />
+
+<!-- Endoscope camera -->
+<include 
+    file="$(find navion_example)/launch/navion_cam.launch">
+</include>
+
+
+<!-- Optical flow  -->
+  <node name="flow" pkg="opencv_apps" type="phase_corr" >
+      <remap from="image" to="/camera/image_raw" />
+      <param name="use_camera_info" value="false" />
+      <param name="debug_view" value="false" />
+      <param name="block_size" value="10" />
+
+  </node>
+    
+<!-- Navigation node  -->
+  <node name="pov_nav" pkg="pov_mag_navigation" type="pov_navigation_node.py" output="screen"  >
+        <remap from="/desired_field" to="/backward_model/field"/>
+        <param name="~rate" value="$(arg loop_rate)"/>
+        <rosparam command="load" file="$(find pov_mag_navigation)/param/parameters_pov_transnasal.yaml" />
+  </node>
+
+<!-- PS navi -->
+  <node respawn="true" pkg="joy" type="joy_node" name="joy_node" >
+      <param name="autorepeat_rate" value="$(arg loop_rate)"/>
+   </node>
+  <node name="ps_navi_controller" pkg="pov_mag_navigation" type="ps_navi_controller" output="screen" >
+  </node>
+
+<!-- Joystick axes feedback  -->
+  <node name="feedback" pkg="pov_mag_navigation" type="feedback_plot.py" output="screen"  >
+  </node>
+
+<!-- Dynamic reconfigure -->
+  <node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_reconfigure" >
+  </node>
+
+
+  <!-- Navion -->
+  <include file="$(find navion_example)/launch/navion_rviz.launch" pass_all_args="true" />
+
+
+</launch>
