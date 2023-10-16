@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>  
+
+    <arg name="emns_param_path" default="$(find mag_manip)/params/Navion_2.yaml" />
+    <arg name="navion_version" default="2_1" />
+    <arg name="cal_path" default="$(find mpem)/cal/Navion_2-1_Calibration_25-05-2022.yaml" />
+
+    <!-- Navion -->
+    <node name="mns_broadcaster" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 world mns 100" respawn="true" />
+
+    <node name="nav_controller" pkg="nav_controller" type="navion2_controller_node" output="screen" respawn="true">
+        <rosparam command="load" file="$(find nav_controller)/launch/parameters_fast_fields.yaml" />
+        <rosparam command="load" file="$(find nav_controller)/param/navion_$(arg navion_version).yaml" />
+        <param name="emns_param" type="string" value="$(find mag_manip)/params/Navion_2.yaml"/>
+    </node>
+
+    <!-- RViz -->
+    <node name="rviz" pkg="rviz" type='rviz' args="-d $(find nav_rviz)/rviz/config_navion2_rotating.rviz" output="screen" />
+
+    <!-- Rotating field node -->
+    <node name="rotating_field_node" pkg="nav_utils" type='rotating_field_node.py' output="screen" respawn="true">
+         <param name="~calibration_path" type="string" value="$(arg cal_path)" />
+    </node>
+
+
+    <include file="$(find nav_rviz)/launch/navion_urdf_model.launch"/>
+
+
+</launch>

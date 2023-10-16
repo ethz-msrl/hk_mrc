@@ -7,6 +7,9 @@
     <!-- Navion -->
     <include file="$(find navion_example)/launch/navion.launch" pass_all_args="true" />
 
+    <!-- Cart controller -->
+    <include file="$(find endoscopy_cart_controller)/launch/cart_controller.launch"/>
+    
     <!-- RViz -->
     <node name="rviz" pkg="rviz" type='rviz' args="-d $(find navion_example)/rviz/config_navion.rviz" output="screen" />
     <include file="$(find nav_rviz)/launch/navion2_urdf_model.launch"/>
