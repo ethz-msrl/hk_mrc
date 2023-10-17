@@ -29,8 +29,5 @@ Uses Navion with a generic RViz interface for research purposes. The control of 
 
 This includes the cart fluid control box which channels are controlled with the associated. RViz panel.
 
-#### navion_rviz_rotating_field.launch
-Uses Navion with an RViz interface for fast rotating fields. 
-
 #### navion_cam.launch
 Interfaces a camera using the VideoStreamOpenCV package.

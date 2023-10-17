@@ -12,9 +12,15 @@ ROS packes used to interface with the Navion installed in the Multi-Scale Medica
  
 ## ROS setup
 
-This repository contains ROS packages that are contained in a ROS workspace overlaying packages created by the MSRL, ETH Zurich.
+This repository contains ROS packages that are contained in a ROS workspace overlaying `catkin_ws` packages created by the MSRL, ETH Zurich located in `navion_ws`.
 
-## Launch files
+
+## Launch files in navion_ws (desktop exectuables)
+
+* **Navion RViz**: launch Navion 2 with a standard RViz interface
+* **Navion Fast Rotating Fields**: launch Navion 2 with RViz to generate fast rotating fields
+
+## Launch files in catkin_ws
 
 In `navion_example/launch` can be found a collection of ROS launch files.
 To run the file, open a new terminal and run
