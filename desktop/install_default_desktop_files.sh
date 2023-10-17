@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Set the source directories for desktop files and logos
-DESKTOP_SRC_DIR="/home/$USER/navion_ws/src/Navion/desktop/default"
-LOGO_SRC_DIR="/home/$USER/navion_ws/src/Navion/desktop/logos"
+DESKTOP_SRC_DIR="/home/$USER/catkin_ws/src/hk_mrc/desktop/default"
+LOGO_SRC_DIR="/home/$USER/catkin_ws/src/hk_mrc/desktop/logos"
 
 # Set the target directories for desktop files and icons in the user's home directory
 DESKTOP_TARGET_DIR="$HOME/.local/share/applications"
