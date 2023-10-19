@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+TerminalOptions=bash
+Exec=bash -c "source /opt/ros/noetic/setup.bash;source ~/navion_ws/install/setup.bash;roslaunch nav_launch navion2_rviz.launch"
+Name=Navion Rviz
+Comment=Launch Navion software with RViz GUI.
+Icon=/home/<username>/.local/share/icons/hicolor/48x48/apps/navion_logo.png

@@ -1,5 +1,5 @@
 # hk_mrc
-ROS packes used to interface with the Navion installed in the Multi-Scale Medical Roboics Center in Hongkong
+ROS packes used to interface with the Navion installed in the Multi-Scale Medical Roboics Center in Hong Kong
 
  <table border = "0">
      <tr>
@@ -10,12 +10,26 @@ ROS packes used to interface with the Navion installed in the Multi-Scale Medica
      </tr>
  </table>
  
- 
-## Launch files
+## ROS setup
 
-### navion2.launch
+This repository contains ROS packages that are contained in a ROS workspace overlaying `catkin_ws` packages created by the MSRL, ETH Zurich located in `navion_ws`.
 
-Interfaces with Navion without GUI. The control of the field is performed with a PS4 controller or by publishing .
+
+## Launch files in navion_ws (desktop exectuables)
+
+* **Navion RViz**: launch Navion 2 with a standard RViz interface
+* **Navion Fast Rotating Fields**: launch Navion 2 with RViz to generate fast rotating fields
+
+## Launch files in catkin_ws
+
+In `navion_example/launch` can be found a collection of ROS launch files.
+To run the file, open a new terminal and run
+
+```bash
+roslaunch navion_example <name_of_the_launch_file>
+```
+
+Refer to [the README of the `navion_example` package](navion_example/README.md) for a description of the launch files.
 
 ## RViz plugins
 
@@ -23,8 +37,8 @@ Interfaces with Navion without GUI. The control of the field is performed with a
 
 The user can use the following controls from the panel:
 
-* Go grom READY to RUN state and start pushing currents: click on "Start" (calls the service `navion/start_running` with req. `True`)
-* Go from RUN and READY state and stop pushing currents: click on "Stop" (calls the service `navion/start_running` with req. `False`)
+* Go grom `READY` to `RUN` state and start pushing currents: click on "Start" (calls the service `navion/start_running` with req. `True`)
+* Go from RUN and `READY` state and stop pushing currents: click on "Stop" (calls the service `navion/start_running` with req. `False`)
 * Recover from an error state: click on "Acknolwedge error" (calls the service `navion/reset_system`)
 * Change the logging modulus: set the modulus in the spin box and click "Set log mod." (calls the service `navion/set_logging_modulus` with the provided modulus)
 

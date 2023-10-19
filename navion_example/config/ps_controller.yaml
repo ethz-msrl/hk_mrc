@@ -1,7 +1,7 @@
 controller_name: ps_navi
 eMNS_name: navion
 
-joy_node/dev: "/dev/input/psc"
+joy_node/dev: "/dev/input/psc_5"
 
 ###### CHANGE CONTROLLER MAPPING ###############################
 # mapping 0: joystick axis 0 -> rot(X),  axis 1 -> rot(Y)      #
@@ -20,8 +20,8 @@ joy_node/dev: "/dev/input/psc"
 
 /ps_navi_controller/button_x: 1
 /ps_navi_controller/button_o: 0
-/ps_navi_controller/button_up: 8
-/ps_navi_controller/button_down: 9
+/ps_navi_controller/button_up: 11
+/ps_navi_controller/button_down: 12
 /ps_navi_controller/button_left: 10
 /ps_navi_controller/button_right: 11
 /ps_navi_controller/button_ps: 6
@@ -31,5 +31,5 @@ joy_node/dev: "/dev/input/psc"
 
 /ps_navi_controller/angleIncrement: 0.040
 /ps_navi_controller/posIncrement: 0.0005
-/ps_navi_controller/mfMagnitude: 0.02
+/ps_navi_controller/mfMagnitude: 0.025
 /ps_navi_controller/maxMfMagnitudeIncrement_: 0.0001
