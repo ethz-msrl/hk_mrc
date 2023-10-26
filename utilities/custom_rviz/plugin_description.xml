@@ -1,0 +1,11 @@
+<library path="lib/libcustom_rviz">
+
+ <class name="magnetics/Rotating Frequency Control with Navion Panel"
+         type="navion::RotFreqMagFieldPanel"
+         base_class_type="rviz::Panel">
+    <description>
+        Panel to control frequency of rotating magnetic field with Navion 2
+    </description>
+  </class>
+
+</library>
