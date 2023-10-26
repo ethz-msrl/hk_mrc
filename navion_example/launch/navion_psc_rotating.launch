@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>  
+
+    <!-- PS Navi controller -->
+    <rosparam command="load" file="$(find navion_example)/config/ps_controller_rotating_field.yaml" />
+
+    <node respawn="true" pkg="joy" type="joy_node" name="joy_node">
+            <param name="autorepeat_rate" value="50"/>
+    </node>
+    <node pkg="ps_navi_controller" type="ps_navi_controller" name="ps_navi_controller" respawn="false">
+        <remap from="/ps_navi_controller/target_mf" to="/navion/desired_field_rot_axis"/>
+    </node>
+
+</launch>

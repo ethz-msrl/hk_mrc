@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>  
+
+    <!-- Navion -->
+    <include file="$(find nav_launch)/launch/navion2_rviz_rotating_field.launch" pass_all_args="true" />
+
+    <!-- PlayStation controller -->
+    <include file="$(find navion_example)/launch/navion_psc_rotating.launch" pass_all_args="true" />
+
+</launch>
