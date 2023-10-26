@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-model
+  href="http://download.ros.org/schema/package_format3.xsd"
+  schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>endoscopy_cart_joystick</name>
+  <version>0.0.0</version>
+  <description>Package to control endoscopy cart with joystick</description>
+  <license>Apache License 2.0</license>
+
+
+<maintainer email="qboehler@ethz.ch">Quentin Boehler</maintainer>
+<author email="qboehler@ethz.ch">Quentin Boehler</author>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+
+  <depend>endoscopy_cart_controller</depend>
+  <depend>rviz</depend>
+  <depend>dynamic_reconfigure</depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

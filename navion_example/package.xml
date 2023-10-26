@@ -20,7 +20,7 @@
     limitations under the License.
 -->
 
-<package>
+<package format="3">
   <name>navion_example</name>
   <version>3.1.0</version>
   <description>The navion example package</description>
@@ -34,7 +34,10 @@
   <build_depend>std_msgs</build_depend>
   <build_depend>tf</build_depend>
 
-  <run_depend>video_stream_opencv</run_depend>
-  <run_depend>nav_launch</run_depend>
+  <depend>endoscopy_cart_joystick</depend>
+  <depend>endoscopy_cart_controller</depend>
+
+  <depend>video_stream_opencv</depend>
+  <depend>nav_launch</depend>
   
 </package>
