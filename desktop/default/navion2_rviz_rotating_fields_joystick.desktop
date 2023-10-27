@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+TerminalOptions=bash
+Exec=bash -c "killall -9 rosmaster; source /opt/ros/noetic/setup.bash;source ~/navion_ws/install/setup.bash;source ~/catkin_ws/devel/setup.bash;roslaunch navion_example navion_rotating_field_joystick.launch"
+Name=Navion Fast Rotating Fields with PS5 controller
+Comment=Launch Navion software with RViz GUI.
+Icon=/home/<username>/.local/share/icons/hicolor/48x48/apps/navion_logo.png

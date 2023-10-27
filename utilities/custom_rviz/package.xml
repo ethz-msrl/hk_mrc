@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>custom_rviz</name>
+  <version>0.1.0</version>
+  <description>Panel for basic control of the Navion 2</description>
+  <maintainer email="qboehler@ethz.ch">Quentin Boehler</maintainer>
+  <author email="qboehler@ethz.ch">Quentin Boehler</author>
+
+
+  <license>TO DO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+
+  <depend>mag_msgs</depend>
+  <depend>tf</depend>
+  <depend>rviz</depend>
+  <depend>nav_controller</depend>
+  <depend>tsc_utils</depend>
+  <depend>mag_rviz</depend>
+  <depend>mag_calculator</depend>
+
+  <export>
+<!--      <rosdoc config="${prefix}/rosdoc.yaml"/>-->
+      <rviz plugin="${prefix}/plugin_description.xml"/>
+  </export>
+</package>

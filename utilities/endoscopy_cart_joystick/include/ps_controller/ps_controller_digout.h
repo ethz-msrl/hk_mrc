@@ -25,12 +25,15 @@
 #include <ros/time.h>
 #include <tf/transform_datatypes.h>
 
+
 // msg
-#include <std_msgs/Float32.h>
-#include <std_msgs/Int32.h>
-#include <opencv_apps/Point2D.h>
+// #include <std_msgs/Float32.h>
+// #include <std_msgs/Int32.h>
 #include <sensor_msgs/Joy.h>
-#include <std_srvs/Trigger.h>
+// #include <std_srvs/Trigger.h>
+#include <endoscopy_cart_controller/digital_outputs.h>
+#include <endoscopy_cart_controller/setDigout.h>
+
 
 
 class PsNaviController {
@@ -48,32 +51,17 @@ public:
 
 
 private:
+    // endoscopy_cart_controller::digital_outputs dig_out_msg_;
+
+    // ros::Publisher dig_out_pub_;
     ros::Subscriber ps_navi_sub_;
-    ros::Publisher target_speed_pub_;
-    ros::Publisher change_field_mag_pub_;
-    ros::Publisher insertion_pub_;
-    ros::ServiceClient calib_client_;
-    ros::ServiceClient save_config_client_;
-    ros::ServiceClient goto_config_client_;
+    ros::ServiceClient setDigout_srv;
  
-    double gain_;
-    double u_des_, v_des_;
-    double insert_speed_gain_;
+    int axis_lr_;
+    int axis_ud_;
+    bool digout_state[8];
+    bool digout_state_prev[8];
 
-    int joy_axis_0_;
-    int joy_axis_1_;
-    int joy_axis_l3_;
-    int button_up_;
-    int button_down_;
-    int button_l1_;
-    int button_l2_;
-    int button_l3_;
-    int button_x_;
-    int button_o_;
-    int button_ps_;
-
-    bool flag_button_up_;
-    bool flag_button_down_;
 };
 
 
