@@ -1,5 +1,5 @@
 # hk_mrc
-ROS packes used to interface with the Navion installed in the Multi-Scale Medical Roboics Center in Hong Kong
+ROS packes used to interface with the Navion installed in the Multi-Scale Medical Robotics Center in Hong Kong
 
  <table border = "0">
      <tr>
